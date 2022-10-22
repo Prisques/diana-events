@@ -1302,7 +1302,15 @@ L'expérience je veux l'avoir avec ma conpagne. On n'a pas toujours eu des sorti
 </div>
 </div>
 
+<!--Scroll to top-->
+<div id="scrolltotop"> <img id="scrollfleche" src="./assets/images/monprojet/arrow white.png" alt=""><div >  </div></div>
+<style>
+#scrolltotop{display:none;z-index:1000;position:fixed;bottom:25px;right:35px;cursor:pointer;width:40px;height:40px;background: #ff4838;border-radius: 100%; };
 
+  #scrolltotop div{width:6px;height:6px;transform:rotate(-135deg);border:solid #ffffff;border-width:0 3px 3px 0;padding:3px;margin-top:16px;margin-left:12px;}
+    #scrollfleche {position:fixed;bottom:32px;right:34px;cursor:pointer;width:44px;height:24px; z-index: 200000; }</style>
+
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script> 
 <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.6.0.min.js"></script>
 <script src="assets/js/chain_fade.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -1313,6 +1321,16 @@ L'expérience je veux l'avoir avec ma conpagne. On n'a pas toujours eu des sorti
 <script src="assets/js/jquery-ui.js"></script>
 
 <script src="assets/js/main.js"></script>
+<script>$('#scrolltotop').click(function(){
+	$('html,body').animate({scrollTop: 0}, 'slow');
+});
+$(window).scroll(function(){
+	if($(window).scrollTop()<500){
+		$('#scrolltotop').fadeOut();
+	}else{
+		$('#scrolltotop').fadeIn();
+	}
+});</script>
 </body>
 
 <!-- Mirrored from demo.egenslab.com/html/tourxpro/demo/index3.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Oct 2022 07:09:47 GMT -->
